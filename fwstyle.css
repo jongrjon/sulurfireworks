@@ -172,3 +172,34 @@ footer {
     height: auto;
     border-radius: 5px; /* Optional: Rounded corners for logos */
 }
+
+.map-legend {
+    display: flex;
+    justify-content: center; /* Center the legend items horizontally */
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Space between legend items */
+    margin: 20px auto; /* Space above and below the legend */
+    padding: 10px;
+    max-width: 1200px; /* Matches the width of the map and other sections */
+    text-align: left; /* Align text for labels */
+}
+
+.legend-item {
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+    gap: 10px; /* Space between icon and text */
+}
+
+.legend-icon {
+    width: 30px; /* Set consistent icon size */
+    height: 30px;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .map-legend {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+        gap: 15px; /* Space between stacked items */
+    }
+}
