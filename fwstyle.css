@@ -117,9 +117,14 @@ table tr.row-divider td {
 
 footer {
     background-color: #EA272A;
-    color: white;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
+}
+
+.footer-logo {
+    max-width: 200px; /* Adjust to your desired size */
+    height: auto;
+    display: inline-block;
 }
 
 .go-to-map {
