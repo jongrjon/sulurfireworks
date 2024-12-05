@@ -1,0 +1,169 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #EA272A;
+    text-align: center;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+h2 {
+    color: #EA272A;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #EA272A;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table td, table th {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #EA272A;
+    color: white;
+}
+
+table tr.row-divider td {
+    border-bottom: 4px solid #EA272A;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 10px;
+    color: white;
+    background-color: #EA272A;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #c51f1f;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1200px; /* Same max-width as the hero sections */
+    margin: 20px auto; /* Center it like the hero sections */
+    padding: 0; /* Ensure no extra padding affects the width */
+    position: relative;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 500px;
+    border: 0;
+}
+
+/* Gradient overlay to indicate more content below the map */
+.map-container {
+    position: relative;
+}
+
+.map-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px; /* Height of the gradient */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    pointer-events: none; /* Ensure the overlay doesn’t interfere with interactions */
+}
+
+/* Adjust map height for mobile */
+@media (max-width: 768px) {
+    .map-container iframe {
+        height: 70vh; /* Matches earlier changes for mobile */
+        width: 100%; /* Ensures full width */
+    }
+    .map-container {
+        max-width: 100%; /* Removes max-width for smaller screens */
+    }
+}
+
+footer {
+    background-color: #EA272A;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.go-to-map {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #EA272A;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.go-to-map:hover {
+    background-color: #c51f1f;
+}
+
+.section-image {
+    display: block;
+    width: 100%;
+    max-width: 800px; /* Limit the image size */
+    height: auto;
+    margin: 20px auto; /* Center the image and add spacing */
+    border-radius: 8px; /* Optional: Rounded corners for a polished look */
+}
+
+.sponsors-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between logos */
+    margin: 20px 0; /* Space above and below the logos */
+}
+
+.sponsor-logo {
+    max-width: 150px; /* Limit logo size */
+    height: auto;
+    border-radius: 5px; /* Optional: Rounded corners for logos */
+}
